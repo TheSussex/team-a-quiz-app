@@ -1,0 +1,83 @@
+html { 
+  background: url("../assets/screen9.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  background-color: #83822d;
+  font-family: 'Signika', serif;
+  }
+
+  body {
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 100px;
+  }
+
+  #logo {
+    width: auto;
+    height: 40px;
+    filter: drop-shadow(3px 3px 6px black);
+  }
+
+  .landing {
+    margin-top: 70px;
+  }
+
+  #big_text{
+    color: #ffffff;
+    font-size: 100px;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    filter: drop-shadow(5px 3px 6px black);
+  }
+
+  #medium_text{
+    color: #dfd81a;
+    font-family: 'Raleway', serif;
+    font-size: 45px;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    filter: drop-shadow(5px 3px 6px black);
+  }
+
+  #small_text{
+    color: #ffffff;
+    font-family: 'Raleway', serif;
+    font-size: 30px;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    filter: drop-shadow(5px 3px 6px black);
+  }
+
+  #button_section{
+    margin-top: 50px;
+  }
+
+  button {
+    width: 100px;
+    height: 37px;
+    border-radius: 15px;
+    background-color: #6d8c04;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    margin-right: 30px;
+    outline: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  #button_2 {
+    background: none;
+    border: 3px solid;
+    border-color: #6d8c04;
+  }
+
+  
