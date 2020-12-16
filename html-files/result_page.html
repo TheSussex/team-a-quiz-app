@@ -3,47 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css-files/style_success.css">
+    <title>Result</title>
+    <link rel="stylesheet" href="../css-files/result_page.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Signika">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src='../javascript-files/quiz_questions.js'></script>
+
 </head>
-<body id="result-body">
-    <div class="container">
-        <div class="form">
 
-                <h2 id="score">Your Score</h2>
-    
-            <div id="circle">
-                <h3 id="score-fraction">3/5</h3>
-            </div>
-    
-            <button class="share">
-                Share your results <br>
-                <div class="icons">
-                    <a href=""><i class="fab fa-facebook-square"></i></a>
-                    <a href=""><i class="fab fa-twitter-square"></i></a>
-                </div>
-            </button>
-    
-            <div id="report">
-                
-    
-                    <div class="report-contents">
-                        <!--contents that is questions and answers will be added by javascript-->
+<body onload="changeScore(event)">
+    <div class="result_container">
+        <h2 class="result_title">Your Result</h2>
+        
 
-                        <h5 id="result-display">
-                            Display results <br>
-                            Text below
-                        </h5>
-                    </div>
-                
-            </div>
-    
-            </div>
-            
-    
+        <div class="circle">
+            <h2 class="result" id="result">3/5</h2>
         </div>
+
+        <b class="comment">Congratulations. You're a Whiz!</b>
+
+        <button class="ok_button" onclick="goToDashboard(event)">OK</button>
+
     </div>
 </body>
 </html>
