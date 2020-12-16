@@ -35,7 +35,7 @@ html {
     padding:2px 10px 0px 2px;
     }
 
-#input{
+.input{
     width: 350px;
     height:0px;
     border-radius: 2px 5px;
@@ -59,6 +59,7 @@ button{
     outline: none;
     margin: 20px 15px 15px 85px;
     color: white;
+    cursor: pointer;
 
 }
 

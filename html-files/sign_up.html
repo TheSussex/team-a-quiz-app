@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Signika">
 </head>
 <body>
+    <script src="../javascript-files/log_in.js"></script>
     <div id="page1">
         <img src="../assets/q_whiz.png" alt="Q-whiz logo" id="logo">
         <div>
@@ -16,25 +17,25 @@
                     <div class="head"><h1>Let's get to know you!</h1></div>
                 </div>  
                 <div>
-                    <input type="text" id="input" placeholder="What should we call you?" required/>
+                    <input type="text" id="username" class="input" placeholder="What should we call you?" required/>
                 </div>
                 <br>
                 <br>
                 <div>
-                    <input type="email" id="input" placeholder="Your email address?" required/>
+                    <input type="email" id="email" class = "input" placeholder="Your email address?" required/>
                 </div>
                 <br>
                 <br>
                 <div>
-                    <input type="password" id="input" placeholder="Password?" required/>
+                    <input type="password" id="password" class= "input" placeholder="Password?" required/>
                 </div>
             </form>
             <div class="form-check">
-                <input type="checkbox" name="checkbox" id="checkbox">
+                <input type="checkbox" name="checkbox" id="checkbox" required = "required">
                 <span>Wait a second! Please tick to show you agree to our <a href="">Terms and Conditions</a>.</span>
               </div>
             <div>
-                <button>SIGN UP</button>
+                <button onclick="signupUser(event);">SIGN UP</button>
             </div>
             <br>
             <div class="account">
