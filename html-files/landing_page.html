@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="../css-files/landing_page.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Signika|Andika|Raleway">
-    <script></script>
+    <script src="../javascript-files/landing.js"></script>
 </head>
 
 <body>
@@ -23,8 +23,13 @@
         </div>
 
         <div id="button_section">
-            <button id="button_1">SIGN IN</button>
-            <button id="button_2">LOG IN</button>
+            <button id="button_1" onclick="goToSignup(event)">
+               SIGN UP
+            </button>
+
+            <button id="button_2" onclick="goToLogin(event)">
+                LOG IN
+            </button>
         </div>
     </section>
 </body>
