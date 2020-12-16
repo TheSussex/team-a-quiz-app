@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Signika">
 </head>
 <body>
+    <script src="../javascript-files/log_in.js"></script>
     <div id="page2">
         <img src="../assets/q_whiz.png" alt="Q-whiz logo" id="logo">
         <div class="heading">
@@ -17,12 +18,12 @@
         <div>
             <form>
                 <div>
-                    <input type="text" id="input" placeholder="Username" required/>
+                    <input type="text" id="username" class = "input" placeholder="Username" required/>
                 </div>
                 <br>
                 <br>
                 <div>
-                    <input type="password" id="input" placeholder="Password" required/>
+                    <input type="password" id="password" class="input" placeholder="Password" required/>
                 </div>
             </form>
             <div class="forgot">
@@ -31,7 +32,7 @@
             <br>
             <br>
             <div>
-                <button>LOG IN</button>
+                <button onclick="loginUser(event);">LOG IN</button>
             </div>
             <br>
             <div class="account">
