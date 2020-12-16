@@ -3,81 +3,115 @@
     padding:0%;
     box-sizing:border-box;  
 }
-body{
-    overflow:hidden;
-    background-size: 100%;
-    background-repeat: round;
-    background-image: url("https://images.unsplash.com/photo-1566712775584-b68f85fe0e78?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGdyZWVuJTIwZ3JhZGllbnR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+html { 
+    background: url("../assets/screen10.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #83822d;
+    font-family: 'Signika', serif;
+    overflow: hidden;
+  }
+
+#logo{
+    width: auto;
+    height: 57px;
+    filter:drop-shadow(2px 1px 2px black);
+    cursor:pointer;
+    margin: auto;
+    margin-top: 2px;
 }
 
 .heading {
-    margin: 40px 50px;
-    text-align: left;
-    padding: 20px 30px 20px 5px;
+    margin: 30px 0px 0px 10px;
+    text-align: center;
+    padding: 0px 20px 35px 0px;
     font-size:medium;
+    width:auto;
 }
 
-.head1{
+.head{
     padding:2px 10px 0px 2px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
-
-.head2{
-    margin:0px 10px 0px 0px;
-    font-family: initial;
-
-}
+    }
 
 #input{
-    width: 300px;
-    height:30px;
-    border-radius: 3px 15px;
-    border-color: #BF3FA4;
-    border-top-style: none;
-    border-right-style: none;
-    border-bottom-style: solid;
-    border-left-style: none;
-    padding: 15px 30px 20px 10px; 
+    width: 350px;
+    height:0px;
+    border-radius: 2px 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1.5px solid #546d03;
+    padding: 12px 50px 20px 27px; 
     outline:none;
-    margin-top:0px;
-    margin-bottom:-10px;
+    margin:0px 10px 0px 30px;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0.3,0);
 }
 
 button{
     border-style: hidden;
-    border-radius: 25px;
-    width:300px;
+    border-radius:15px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    width:325px;
     height:50px;
-    background-color: white;
+    background-color: #6d8c04;
     outline: none;
-    background-image: url("https://image.freepik.com/free-vector/abstract-orange-purple-gradient-flow-shapes-background_71374-666.jpg");
+    margin: 20px 15px 15px 85px;
+    color: white;
 
 }
 
-#page{
+button:hover{
+    background: #dfd81a;
+    color: white;
+    transition: none;
+}
+
+#page1, #page2{
     background-repeat:no-repeat;
-    background-color: white;
-    border-radius: 50px;
-    height:580px;
-    width:380px;
-    margin:35px 150px 40px 500px;
+    background-color:white;
+    border-radius: 3px;
+    min-height:500px;
+    width:500px;
+    margin:35px 150px 40px 450px;
+    display: grid;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-form, .log-in{
-    padding:10px 10px 10px 40px;
+#page1{
+    padding-top:5px;
+    padding-bottom:20px;
 }
+
+#page2{
+    padding-top:40px;
+    padding-bottom:20px;
+}
+
+
 form{
-    padding:90px 10px 10px 40px;
+    padding:8px 6px 2px 35px;
 }
 
 .account{
     text-align: center;
 }
-  p a, .forgot a{
+  p a, .forgot a, span a{
       text-decoration:none;
-      color: #488bcc;
+      color: #dfd81a;
   }
   .forgot{
       text-align: left;
-      margin:2px 0px 0px 270px;
+      margin:3px 0px 0px 350px;
+  }
+  .form-check {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px 10px 70px;
+  }
+  span {
+    margin: 3px 40px 0px 8px;
   }
