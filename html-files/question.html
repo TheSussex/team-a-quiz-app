@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="html_" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -11,25 +11,25 @@
 
 </head>
 
-<body id="q1">
+<body id="q1" onload="setValues(event)">
     <div class="wrapper">
 
         <form action="">
 
             <div class="question">
-                <h3 class="question_heading">Question 1</h3>
-                <p class="question_text">Who is the governor of Central Bank of Nigeria?</p>
+                <h3 class="question_heading" id="question_heading">Question 1</h3>
+                <p class="question_text" id="question_text">Who is the governor of Central Bank of Nigeria?</p>
             </div>
 
             <div class="options" id="options">
                     <input type="radio" id="option_a" name="option_select" class="option_select" value="c">
-                    <label for="option_a">Godwin Emefiele</label>
+                    <label id="option_a_label" for="option_a">Godwin Emefiele</label>
 
                     <input type="radio" id="option_b" name="option_select" class="option_select" value="b">
-                    <label for="option_b">Ngozi Okonjo-Iweala</label>
+                    <label id="option_b_label" for="option_b">Ngozi Okonjo-Iweala</label>
 
                     <input type="radio" id="option_c" name="option_select" class="option_select" value="c">
-                    <label for="option_c">Charles Soludo</label>
+                    <label id="option_c_label" for="option_c">Charles Soludo</label>
 
                     <button class="submit_button" onclick="submitResponse(event)">Submit</button>
             </div>
