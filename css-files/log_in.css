@@ -17,7 +17,7 @@ html {
 #logo{
     width: auto;
     height: 57px;
-    filter:drop-shadow(2px 1px 2px black);
+    filter:drop-shadow(1px 1px 1px black);
     cursor:pointer;
     margin: auto;
     margin-top: 2px;
@@ -98,21 +98,21 @@ form{
 .account{
     text-align: center;
 }
-  p a, .forgot a, span a{
-      text-decoration:none;
-      color: #dfd81a;
-  }
-  .forgot{
-      text-align: left;
-      margin:3px 0px 0px 350px;
-  }
-  .form-check {
+p a, .forgot a, span a{
+    text-decoration:none;
+    color: #dfd81a;
+}
+.forgot{
+    text-align: left;
+    margin:3px 0px 0px 350px;
+}
+.form-check {
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 10px 10px 70px;
-  }
-  span {
+}
+span {
     margin: 3px 40px 0px 8px;
-  }
+}
