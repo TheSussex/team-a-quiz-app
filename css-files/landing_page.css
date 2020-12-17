@@ -6,8 +6,6 @@
   -o-background-size: cover;
   background-size: cover;
   font-family: 'Signika', serif;
-  /* height: 100%;
-    width: 100%; */
 }
 
 #quiz_home {
@@ -18,91 +16,85 @@
   -o-background-size: cover;
   background-size: cover;
   font-family: 'Signika', serif;
-  /* height: 100%;
-    width: 100%; */
 }
 
-  body {
-    /* overflow-x: hidden; */
-    /* height: 100%;
-    width: 100%; */
-    margin-top: 50px;
-    margin-left: 100px;
-    /* position: absolute; */
-  }
-
-  #logo, #logo2 {
-    width: auto;
-    height: 40px;
-    filter: drop-shadow(3px 2px 3px black);
-    cursor: pointer;
-  }
-
-  #logo2 {
-    height: 60px;
-  }
-
-  .landing {
-    margin-top: 70px;
-  }
-
-  .big_text{
-    color: #ffffff;
-    font-size: 100px;
-    font-weight: 100;
-    padding: 0;
-    margin: 0;
-    filter: drop-shadow(5px 3px 6px black);
-  }
-
-  .medium_text{
-    color: #dfd81a;
-    font-family: 'Raleway', serif;
-    font-size: 45px;
-    font-weight: 100;
-    padding: 0;
-    margin: 0;
-    filter: drop-shadow(5px 3px 6px black);
-  }
-
-  .small_text{
-    color: #ffffff;
-    font-family: 'Raleway', serif;
-    font-size: 30px;
-    font-weight: 100;
-    padding: 0;
-    margin: 0;
-    margin-top: 30px;
-    filter: drop-shadow(5px 3px 6px black);
-  }
-
-  #button_section{
-    margin-top: 50px;
-  }
-
-  button {
-    width: 100px;
-    height: 37px;
-    border-radius: 15px;
-    background-color: #6d8c04;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    margin-right: 30px;
-    outline: none;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  }
-
-  button:hover {
-  background: #dfd81a;
-  color: white;
-  transition: none;
+body {
+  margin-top: 50px;
+  margin-left: 100px;
 }
 
-  #button_2 {
-    background: none;
-    border: 3px solid;
-    border-color: #6d8c04;
+#logo, #logo2 {
+  width: auto;
+  height: 40px;
+  filter: drop-shadow(3px 2px 3px black);
+  cursor: pointer;
+}
+
+#logo2 {
+  height: 60px;
+}
+
+.landing {
+  margin-top: 70px;
+}
+
+.big_text{
+  color: #ffffff;
+  font-size: 100px;
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+  filter: drop-shadow(5px 3px 6px black);
+}
+
+.medium_text{
+  color: #dfd81a;
+  font-family: 'Raleway', serif;
+  font-size: 45px;
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+  filter: drop-shadow(5px 3px 6px black);
+}
+
+.small_text{
+  color: #ffffff;
+  font-family: 'Raleway', serif;
+  font-size: 30px;
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+  filter: drop-shadow(5px 3px 6px black);
+}
+
+#button_section{
+  margin-top: 50px;
+}
+
+button {
+  width: 100px;
+  height: 37px;
+  border-radius: 15px;
+  background-color: #6d8c04;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  margin-right: 30px;
+  outline: none;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+background: #dfd81a;
+color: white;
+transition: none;
+}
+
+#button_2 {
+  background: none;
+  border: 3px solid;
+  border-color: #6d8c04;
 }
 
 #button_2:hover{
@@ -112,15 +104,10 @@
 #button_3 {
   background: none;
   border: none;
-  /* margin: 30px auto 0; */
   display: block;
-  /* font-size: 20px; */
   width: auto;
   outline: none;
-
-  /* position: relative; */
   transition: 0.3s;
-  /* padding: 10px;  */
   box-shadow: none;
   border-bottom: 1px solid #dfd81a;
   border-radius: 0px;
@@ -187,9 +174,6 @@ li{
 table {
   width: 100%;
   min-height: 120px;
-  /* background-color: #ffffff;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  color: black; */
   border-collapse: separate;
   border-spacing: 0 20px;  
 }

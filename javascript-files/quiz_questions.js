@@ -1,3 +1,4 @@
+//initialize objects to store question details
 var question1 = {
     number: 1,
     question: "Who is the governor of Central Bank of Nigeria?",
@@ -33,7 +34,7 @@ var question4 = {
     option_b: "45th",
     option_c: "44th",
     answer: "c",
-    image_url: "../assets/honey_lines.png"
+    image_url: "../assets/windows_and_leaves.png"
 }
 var question5 = {
     number: 5,
@@ -45,31 +46,32 @@ var question5 = {
     image_url: "../assets/clothes_on_lines.png"
 }
 
+//define variables for array of user answers, current question number and total score
 let user_answers = []
 let qnumber = 1;
 let score = 0;
 
 
-
+//function called on click of submit button in questions.html page
 function submitResponse(event) {
     event.preventDefault()
 
     var val = "";
 
+    //get the radio button that is selected on the questions page (user answer)
     radios = document.getElementsByClassName("option_select")
     for (var i=0, len=radios.length; i<len; i++) {
         if ( radios[i].checked ) { 
             val = radios[i].value;
+
+            //deselect the radio button so it doesn't appear selected for the next question
             radios[i].checked = false
             break; 
         }
     }
-
-    console.log (val)
     storeResponse(val)
     changeQuestion(qnumber+1)
     qnumber = qnumber + 1;
-    console.log (qnumber)
     if (qnumber==6){
         computeResult()
         return
@@ -78,12 +80,13 @@ function submitResponse(event) {
 }
 
 
+//store user answer in the array
 function storeResponse(val){
     user_answers.push(val)
-    console.log (user_answers)
     return
 }
 
+//compare user answers with the correct answers defined
 function computeResult(){
     if (user_answers[0] == question1.answer){
         score += 1
@@ -100,32 +103,45 @@ function computeResult(){
     if (user_answers[4] == question5.answer){
         score += 1
     }
-    console.log(score)
-    let userName = sessionStorage.getItem("username")
-    storeScoreDetails(score, userName)
+
+    //get username from session storage and call function to store user score with the username
+    //key field will be username+"score"
+    let userNameScore = sessionStorage.getItem("username")+"score"
+    storeScoreDetails(score, userNameScore)
+
+    //store user score in session storage
     sessionStorage.setItem("score", score)
     outputScore()
     return
 }
 
+//redirect to results page
 function outputScore(){
     window.location.href = "result_page.html"
     return
 }
 
+//display score on results page
 function changeScore(event){
     event.preventDefault()
-    console.log(sessionStorage.getItem("score"))
+    let scoreN = 0
+    
     if (!sessionStorage.getItem("score")){
         scoreN = 0
     }
     else{
         scoreN = sessionStorage.getItem("score")
     }
+
+    let compliment = getCompliment(scoreN)
+    console.log(compliment)
     document.getElementById("result").innerHTML = scoreN+ "/5"
+    document.getElementById("comment").innerHTML = compliment
     return
 }
 
+
+//function changes the question, options and background image on the page
 function changeQuestion(number) {
     if (number==1){
         document.getElementById("question_heading").innerHTML = "Question " + number
@@ -173,42 +189,63 @@ function changeQuestion(number) {
     return
 }
 
-function storeScoreDetails(score, userName){
+
+//store user score details in local storage
+function storeScoreDetails(score, userNameScore){
+
+    //get the date for "day quiz was taken"
     let timeElapsed = Date.now()
     let today = new Date(timeElapsed)
     let date = today.toDateString()
+
+    //convert the score to percentage for "grade"
     let points = (score/5)*100
 
-    if (localStorage.getItem(userName)){
-        let user_details = JSON.parse(localStorage.getItem(userName))
+    //check if user already has previous scores in local storage, then append new score to the array
+    if (localStorage.getItem(userNameScore)){
+        let user_details = JSON.parse(localStorage.getItem(userNameScore))
         user_details.push([date, score, points+"%"])
-        localStorage.setItem(userName, JSON.stringify(user_details))
+        localStorage.setItem(userNameScore, JSON.stringify(user_details))
     }
+
+    //if not create a new array for the user score details
     else {
         let userdetails = [[date, score, points+"%"]]
-        localStorage.setItem(userName, JSON.stringify(userdetails))
+        localStorage.setItem(userNameScore, JSON.stringify(userdetails))
     }
 
     return
 }
 
-function goToDashboard(event) {
-    event.preventDefault()
-    window.location.href = "quiz_home.html"
 
+//function if user is not logged in; redirect to home page(landing page)
+function checkIfLoggedIn(event){
+    event.preventDefault()
     if (!sessionStorage.getItem("username")){
         window.location.href = "landing_page.html"
-        return;
+        return
     }
-    return;
+    return
 }
 
+//function called on click of OK button on result_page.html
+function goToDashboard(event){
+    event.preventDefault()
+
+    window.location.href = "quiz_home.html"
+    return
+}
+
+//function to fill up the table of user scores on the user dashboard
 function fillTable(event){
     event.preventDefault()
 
+    //get username from session storage. Key item is username
     document.getElementById("welcome").innerHTML = sessionStorage.getItem("username") + ","
     let user_key = sessionStorage.getItem("username")
-    let user_details = JSON.parse(localStorage.getItem(user_key))
+
+    //get user scroe details from local storage. Key item is username+"score"
+    let user_details = JSON.parse(localStorage.getItem(user_key+"score"))
 
     for(i=0; i<user_details.length; i++){
         var table = document.getElementById("scoreTable")
@@ -226,6 +263,8 @@ function fillTable(event){
     return
 }
 
+
+//function redirects to quiz page. Called on click of LET'S DO THIS! button on quiz_home.html
 function goToQuestions(event){
     event.preventDefault()
 
@@ -245,7 +284,23 @@ function signUserOut(event){
     event.preventDefault()
 
     sessionStorage.clear()
-    window.location.href = "landing_page.html"
+    window.location.href = "log_in.html"
     return
+}
+
+//function to get complimet to display on results page
+function getCompliment(score){
+    let compliment=""
+    if(score==5||score==4){
+        compliment = "Nice one! You're truly a Whiz!"
+    }
+
+    else if(score==3||score==2){
+        compliment = "Well done. You can do better!"
+    }
+    else if(score==0||score==1){
+        compliment = "Oops! Do you want to try again?"
+    }
+    return compliment
 }
 
