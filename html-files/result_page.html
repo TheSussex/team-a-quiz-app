@@ -10,7 +10,7 @@
 
 </head>
 
-<body onload="changeScore(event)">
+<body onload="checkIfLoggedIn(event); changeScore(event);">
     <div class="result_container">
         <h2 class="result_title">Your Result</h2>
         
@@ -19,7 +19,7 @@
             <h2 class="result" id="result">3/5</h2>
         </div>
 
-        <b class="comment">Congratulations. You're a Whiz!</b>
+        <b class="comment" id="comment"></b>
 
         <button class="ok_button" onclick="goToDashboard(event)">OK</button>
 

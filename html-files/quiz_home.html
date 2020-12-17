@@ -12,7 +12,7 @@
 
 </head>
 
-<body onload="fillTable(event)">
+<body onload="checkIfLoggedIn(event); fillTable(event);">
 
     <header>
         <nav>
@@ -28,7 +28,7 @@
         <div id="page_text">
             <b class="medium_text">Welcome Whiz </b><b class="small_text" id="welcome">User,</b>
             <div class="heading_centre">
-                <p>Here's how well you've performed on the quiz</p>
+                <p>Here's your score history</p>
             </div>
             <div class="table_container">
                 <table id="scoreTable">
