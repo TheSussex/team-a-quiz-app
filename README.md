@@ -1,6 +1,6 @@
 # **Q-Whiz**
 
-A very simple quiz app which features:
+A simple quiz app which features:
 * A landing page with login and sign up links
 * New user Sign Up
 * Existing user Log In
